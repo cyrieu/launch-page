@@ -1,31 +1,39 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import styled from "@emotion/styled"
+import { getFrontendAppUrl } from "../utils/urls"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <HeroContainer>
-      <HeroMainText>asdf</HeroMainText>
-      <HeroSubText>The world's $0 commission stock corkberage</HeroSubText>
-      <HeroSubText>Greentiger for the US</HeroSubText>
-      <div>
-        <input type="text" />
-        <button>give me dat early access bru</button>
-      </div>
-    </HeroContainer>
-    <HowWorksContainer>
-      <div>How it works</div>
-      <div style={{ height: "100px", width: "100px" }}>
-        <Image></Image>
-      </div>
-    </HowWorksContainer>
-  </Layout>
-)
+const IndexPage = () => {
+  const handleGetStarted = () => {
+    const redirectUrl = getFrontendAppUrl()
+    window.location.replace(redirectUrl)
+  }
+
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <HeroContainer>
+        <HeroMainText>Found</HeroMainText>
+        <HeroSubText>Open things quickly</HeroSubText>
+        <HeroSubText>Google Drive</HeroSubText>
+        <div>
+          <button onClick={handleGetStarted}>
+            give me dat early access bru
+          </button>
+        </div>
+      </HeroContainer>
+      <HowWorksContainer>
+        <div>How it works</div>
+        <div style={{ height: "100px", width: "100px" }}>
+          <Image></Image>
+        </div>
+      </HowWorksContainer>
+    </Layout>
+  )
+}
 
 const HeroContainer = styled.div`
   height: 820px;
