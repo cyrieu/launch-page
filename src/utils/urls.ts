@@ -1,5 +1,5 @@
 import { isProd } from "./index"
 
 export function getFrontendAppUrl() {
-  return isProd() ? "https://app.usefound.app" : "http://localhost:3001"
+  return isProd() ? "https://base.usefound.app" : "http://localhost:3001"
 }
