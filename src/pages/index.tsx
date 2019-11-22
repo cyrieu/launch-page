@@ -18,22 +18,33 @@ const IndexPage = () => {
       <HeroContainer>
         <HeroMainText>Found</HeroMainText>
         <HeroSubText>Open things quickly</HeroSubText>
-        <HeroSubText>Google Drive</HeroSubText>
         <div>
-          <button onClick={handleGetStarted}>
-            give me dat early access bru
-          </button>
+          <StartButton onClick={handleGetStarted}>Get started</StartButton>
         </div>
       </HeroContainer>
-      <HowWorksContainer>
-        <div>How it works</div>
-        <div style={{ height: "100px", width: "100px" }}>
-          <Image></Image>
-        </div>
-      </HowWorksContainer>
+      <HowWorksContainer></HowWorksContainer>
     </Layout>
   )
 }
+
+const StartButton = styled.div`
+  cursor: pointer;
+  user-select: none;
+  transition: background 120ms ease-in 0s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: 3px;
+  height: 32px;
+  padding: 0px 12px;
+  font-size: 14px;
+  line-height: 1.2;
+  border: 1px solid rgba(55, 53, 47, 0.16);
+  :hover {
+    background: rgba(55, 53, 47, 0.08);
+  }
+`
 
 const HeroContainer = styled.div`
   height: 820px;
